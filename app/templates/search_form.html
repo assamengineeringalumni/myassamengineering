@@ -1,0 +1,51 @@
+<!--Extend from base Layout-->
+{% extends "base.html" %}
+{% block content %}
+<style>
+    p{
+         font-size: 100%;
+         font-color: #0000FF;
+         font-weight: bold;
+         
+         
+         }
+
+
+    body {
+                background-image: url("/static/img/birds.jpg");
+                background-repeat: no-repeat;
+                background-size : 125%;
+                background-position: center;
+                                
+                }
+    marquee{
+            font-size: 200%;
+            font-color:#000000;
+            }
+
+
+</style>
+<marquee behavior="scroll" direction="right" scrollamount="10">Search someone you know from Assam Engineering College</marquee>
+    <body>
+        
+        <form action="" method="post" name="database">
+            {{form.hidden_tag()}}
+            <p>
+                &nbsp;&nbsp;&nbsp;Please enter Name&nbsp;&nbsp;&nbsp;{{form.name(size=20)}} &nbsp;&nbsp;&nbsp; Year of passing &nbsp;&nbsp;&nbsp;{{form.passyear(size=15)}} &nbsp;&nbsp;&nbsp;Branch &nbsp;&nbsp;&nbsp;{{form.branch(size=3)}} <br>
+            </p>
+            <p style='padding-left : 500px'><input type="submit" value="SUBMIT" ></p>
+        </form>
+         <h2> Search results </h2>
+         {% for result in results %}
+             <table width="100%" border="2">
+         
+                <tr>
+                    <td><b>ID</b></><td><b>NAME</b></td><td><b>BRANCH</b></td><td><b>PASS YEAR</b></td><td><b>HOSTEL</b></td><td><b>EMAIL</b></td><td><b>CONTACT NO</b></td>
+                </tr>
+                <tr>
+                    <td>{{result[0]}}</td><td>{{result[1]}}</td><td>{{result[2]}}</td><td>{{result[3]}}</td><td>{{result[4]}}</td><td>{{result[5]}}</td><td>{{result[6]}}</td>
+                </tr>
+             </table>
+         {% endfor %}
+     </body>
+{% endblock %}

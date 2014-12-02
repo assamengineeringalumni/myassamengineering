@@ -1,0 +1,64 @@
+<!--Extend from base Layout-->
+{% extends "base.html" %}
+
+{% block content %}
+    <style>
+        h1{
+            
+            font-size: 150%;
+            font-color:#000000;
+            text-align:center;
+            
+            }
+        marquee{
+            font-size: 200%;
+            font-color:#000000;
+            }
+            
+    </style>
+    <marquee behavior="scroll" direction="right" scrollamount="10">Welcome to the world of Assam Engineering College Alumni association</marquee>
+    
+    <h1><b>Lets sign up to AEC Fraternity</b></h1>
+    <form action="" method="post" name="login">
+        {{form.hidden_tag()}}
+        <style>
+            body {
+                background-image: url("/static/img/convo.jpg");
+                background-repeat: no-repeat;
+                background-size : 125%;
+                background-position: center;
+                                
+                }       
+                
+            p{
+                
+                
+                font-size: 120%;
+                font-color: #0000FF;
+                font-weight: bold;
+                text-align:center;
+                
+                }
+            
+            
+        </style>
+        
+               
+                
+        <body>
+            <p>
+                Please enter userid &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{form.openid(size=20)}}<br>
+            </p>
+            <p>
+                Please enter Password {{form.password(size=20)}}<br>
+            <p>{{ form.remember_me(size=10)}} Remember Me</p> <br><br>
+            <p>
+                <input type="submit"  value="SUBMIT">
+            </p>
+        </body>
+        </body>
+    </form>
+{% endblock %}
+
+    
+    

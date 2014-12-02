@@ -1,0 +1,38 @@
+<!--Extend from base Layout-->
+{% extends "base.html" %}
+{% block content %}
+<style>
+    p{
+         font-size: 100%;
+         font-color: #0000FF;
+         font-weight: bold;
+         }
+</style>
+        
+    <h1><b>Welcome to the Assam Engineering College Alumni Association</b></h1>
+    <form action="" method="post" name="database">
+        {{form.hidden_tag()}}
+        <p>
+            Please enter your Name &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{form.name(size=20)}}<br>
+        </p>
+        <p>
+            Please enter your year of passing &nbsp;&nbsp;&nbsp;&nbsp;{{form.passyear(size=15)}} <br>
+        </p>
+        <p>
+            Please enter your Branch &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp&nbsp;&nbsp;&nbsp;{{form.branch(size=3)}} <br>
+        </p>
+       <p>
+           Plesae enter your Hostel &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{form.hostel(size=2)}} <br>
+       </p>
+       <p>
+           Please enter your Contact number &nbsp;&nbsp;&nbsp;&nbsp;{{form.phone(size=20)}}<br>
+       </p>           
+       <p>
+           Please enter your email id &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{form.email(size=20)}} <br>
+       </p>
+        
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="submit" value="SUBMIT"></b></p>
+    </form>
+{% endblock %}
+    
+    
